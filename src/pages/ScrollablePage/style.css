@@ -1,0 +1,66 @@
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollable-page {
+  width: 100%;
+}
+
+.scroll-section {
+  min-height: 100vh;
+  padding-top: 80px; /* Account for fixed header */
+  position: relative;
+}
+
+/* Ensure sections have proper spacing */
+.scroll-section:not(:first-child) {
+  padding-top: 100px;
+}
+
+/* Home section should fill the viewport */
+#home.scroll-section {
+  padding-top: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* About section styling */
+#about.scroll-section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+/* Portfolio section styling */
+#portfolio.scroll-section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+/* Contact section styling */
+#contact.scroll-section {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+/* Smooth scrolling animation for better UX */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Fix any potential z-index issues */
+.scroll-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure proper spacing for content */
+.scroll-section .container,
+.scroll-section .About-header {
+  position: relative;
+  z-index: 2;
+}
