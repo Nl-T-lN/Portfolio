@@ -38,7 +38,6 @@ const Headermain = () => {
             className="navbar-brand nav_ac logo-scroll-btn" 
             onClick={() => scrollToSection('home')}
           >
-            <img src={pandaLogo} alt="Sadharanpanda Logo" className="logo-img" />
             <span className="logo-text">{logotext}</span>
           </button>
           <div className="d-flex align-items-center">
@@ -76,7 +75,7 @@ const Headermain = () => {
                       onClick={() => scrollToSection('portfolio')} 
                       className={`nav-scroll-btn my-3 ${activeSection === 'portfolio' ? 'active' : ''}`}
                     >
-                      Portfolio
+                      Projects
                     </button>
                   </li>
                   <li className="menu_item">

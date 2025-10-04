@@ -98,3 +98,76 @@
         transform: translateZ(0);
     }
 }
+
+/* Skills Container Styles */
+.skill-category-title {
+    font-size: 1.5rem; /* Or h3 equivalent */
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--secondary); /* Optional subtle separator */
+    padding-bottom: 0.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin-bottom: 2rem; /* Space before the next category */
+}
+
+.skill-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    background-color: #222; /* Dark background for the pill */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 20px; /* This creates the pill shape */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: var(--text-color-2, #ccc);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.skill-item:hover {
+    background-color: #333; /* Lighter on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    cursor: default; /* Not a link, so default cursor */
+}
+
+.skill-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    filter: grayscale(30%); /* Optional: makes icons less vibrant to match theme */
+}
+
+.skill-button:hover::before {
+
+    left: 100%;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .skill-button {
+        padding: 15px;
+    }
+    
+    .skill-logo {
+        font-size: 2rem;
+        min-width: 50px;
+        height: 50px;
+    }
+    
+    .skill-name {
+        font-size: 1.1rem;
+    }
+}

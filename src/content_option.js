@@ -1,76 +1,110 @@
-import heroImage from "./assets/images/Pandablackbg.png";
+import homeimage from "./assets/images/Pandablackbg.png";
 
-const logotext = "SADHARANPANDA";
+const logotext = "HOME";
 const meta = {
     title: "Nitin Pandey | Offensive Security Engineer",
     description: "I'm Nitin Pandey, an Offensive Security Engineer & Red Teamer specializing in Web Application Penetration Testing, OSINT, and Digital Forensics",
 };
 
 const introdata = {
-    title: "I'm Nitin Pandey",
+    title: "Hi, I'm Nitin",
     animated: {
-        first: "Offensive Security Engineer",
-        second: "Web App Penetration Tester",
-        third: "Red Team Specialist",
+        first: "Bug Creator",
+        second: "Code breaker",
+        third: "Ctf Player",
     },
-    description: "A dedicated security professional with a passion for finding flaws before malicious actors do. My approach combines technical rigor with a creative, adversarial mindset to simulate real-world attacks and strengthen digital defenses. I am also curious for webdev technologies.",
-    your_img_url: heroImage,
+    //description: "A dedicated security professional with a passion for finding flaws before malicious actors do. My approach combines technical rigor with a creative, adversarial mindset to simulate real-world attacks and strengthen digital defenses. I am also curious for webdev technologies.",
+    your_img_url: homeimage,
 };
 
 const dataabout = {
     title: "About Me",
-    aboutme: "Hello, I'm Nitin. My journey into cybersecurity began with a deep curiosity for understanding how systems work—and more importantly, how they can be broken. I am driven by the constant challenge of an ever-evolving digital landscape and thrive on the process of identifying, exploiting, and mitigating complex security vulnerabilities. My focus is on practical, hands-on application. Whether I'm dissecting a vulnerable machine, developing a custom script to automate reconnaissance, or analyzing malware in my homelab, I am committed to a process of continuous learning and skill development. I believe the most effective defense is built upon a profound understanding of the offense, and I dedicate my efforts to mastering that adversarial perspective.",
+    aboutme: "I’m Nitin Pandey, a BTech (ECE) student and practical cybersecurity enthusiast who learns by building. I combine classroom fundamentals with hands-on projects — from creating a voice-controlled robot to experimenting with homelab malware analyses. I work regularly with Kali Linux and common network/forensic tools, and I enjoy automating reconnaissance with custom scripts to sharpen my offensive and defensive understanding. Outside of technical work, I am expanding my skills in web and backend development, graphic design, content writing, and video editing. This mix of creative and technical pursuits helps me communicate complex ideas effectively while continuing to grow as a well-rounded problem-solver.",
 };
 const worktimeline = [
     // Work timeline omitted - focusing on projects and skills
 ];
 
+// content_option.js
+
+// ... (keep all your other data like introdata, dataabout, etc.)
+
 const skills = [
+    // Languages
     {
         name: "Python",
-        value: 90,
+        icon: "/icons/python.svg", // Example path - create an 'icons' folder in your 'public' directory
+        category: "Languages"
+    },
+    
+    {
+        name: "JavaScript",
+        icon: "/icons/javascript.svg",
+        category: "Languages"
     },
     {
         name: "Bash",
-        value: 85,
+        icon: "/icons/bash.svg",
+        category: "Languages"
     },
     {
         name: "PowerShell",
-        value: 75,
+        icon: "/icons/powershell.svg",
+        category: "Languages"
+    },
+    // Offensive Security Tools
+    {
+        name: "Burp Suite",
+        icon: "/icons/burpsuite.svg",
+        category: "Offensive Security Tools"
     },
     {
-        name: "Burp Suite Pro",
-        value: 95,
-    },
-    {
-        name: "Metasploit Framework",
-        value: 90,
+        name: "Metasploit",
+        icon: "/icons/metasploit.svg",
+        category: "Offensive Security Tools"
     },
     {
         name: "Nmap",
-        value: 95,
-    },
-    {
-        name: "Wireshark",
-        value: 85,
+        icon: "/icons/nmap.svg",
+        category: "Offensive Security Tools"
     },
     {
         name: "Cobalt Strike",
-        value: 70,
+        icon: "/icons/cobaltstrike.svg", // You might need to create a generic icon for this
+        category: "Offensive Security Tools"
     },
+    // Analysis & Forensics
+    {
+        name: "Wireshark",
+        icon: "/icons/wireshark.svg",
+        category: "Analysis & Forensics"
+    },
+    {
+        name: "Ghidra", // Added for more depth
+        icon: "/icons/ghidra.svg", // You might need to find or create an icon
+        category: "Analysis & Forensics"
+    },
+    // Core Competencies
     {
         name: "Web App Pentesting",
-        value: 90,
+        icon: "/icons/webapp.svg", // Use a generic web icon
+        category: "Core Competencies"
     },
     {
-        name: "Active Directory Security",
-        value: 80,
+        name: "AD Security",
+        icon: "/icons/activedirectory.svg", // Use a generic server/network icon
+        category: "Core Competencies"
     },
     {
         name: "Digital Forensics",
-        value: 75,
+        icon: "/icons/forensics.svg", // Use a generic microscope/search icon
+        category: "Core Competencies"
     },
 ];
+
+
+// ... (keep the rest of the file the same)
+
 
 const services = [
     {

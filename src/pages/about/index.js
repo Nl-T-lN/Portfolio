@@ -11,6 +11,16 @@ import {
 } from "../../content_option";
 
 export const About = () => {
+  // This new logic groups your skills by category before rendering
+  const groupedSkills = skills.reduce((acc, skill) => {
+    const { category } = skill;
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(skill);
+    return acc;
+  }, {});
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -26,10 +36,7 @@ export const About = () => {
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">{dataabout.title}</h3>
-          </Col>
-          <Col lg="7" className="d-flex align-items-center">
+          <Col lg="12" className="d-flex align-items-center">
             <div>
               <p>{dataabout.aboutme}</p>
             </div>
@@ -57,45 +64,28 @@ export const About = () => {
             </Col>
           </Row>
         )}
+        
+        {/* === START: THIS IS THE ENTIRELY REPLACED SKILLS SECTION === */}
         <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
-          </Col>
-          <Col lg="7">
-            {skills.map((data, i) => {
-              return (
-                <div key={i}>
-                  <h3 className="progress-title">{data.name}</h3>
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      style={{
-                        width: `${data.value}%`,
-                      }}
-                    >
-                      <div className="progress-value">{data.value}%</div>
+            <Col lg="12">
+                <h3 className="color_sec py-4">Skills & Technologies</h3>
+            </Col>
+            {Object.entries(groupedSkills).map(([category, skillsInCategory]) => (
+                <Col lg="12" key={category}>
+                    <h4 className="skill-category-title">{category}</h4>
+                    <div className="skills-list">
+                        {skillsInCategory.map((skill, i) => (
+                            <div key={i} className="skill-item">
+                                <img src={skill.icon} alt={`${skill.name} logo`} className="skill-icon" />
+                                <span>{skill.name}</span>
+                            </div>
+                        ))}
                     </div>
-                  </div>
-                </div>
-              );
-            })}
-          </Col>
+                </Col>
+            ))}
         </Row>
-        <Row className="sec_sp">
-          <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
-          </Col>
-          <Col lg="7">
-            {services.map((data, i) => {
-              return (
-                <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
-                  <p className="service_desc">{data.description}</p>
-                </div>
-              );
-            })}
-          </Col>
-        </Row>
+        {/* === END: REPLACED SKILLS SECTION === */}
+
       </Container>
     </HelmetProvider>
   );
