@@ -69,8 +69,8 @@ const skills = [
         category: "Offensive Security Tools"
     },
     {
-        name: "Cobalt Strike",
-        icon: "/icons/cobaltstrike.svg", // You might need to create a generic icon for this
+        name: "Hydra",
+        icon: "/icons/hydra.png", 
         category: "Offensive Security Tools"
     },
     // Analysis & Forensics
@@ -80,8 +80,8 @@ const skills = [
         category: "Analysis & Forensics"
     },
     {
-        name: "Ghidra", // Added for more depth
-        icon: "/icons/ghidra.svg", // You might need to find or create an icon
+        name: "Ghidra", 
+        icon: "/icons/ghidra.svg", 
         category: "Analysis & Forensics"
     },
     // Core Competencies
@@ -103,7 +103,7 @@ const skills = [
 ];
 
 
-// ... (keep the rest of the file the same)
+
 
 
 const services = [
