@@ -69,8 +69,8 @@ const skills = [
         category: "Offensive Security Tools"
     },
     {
-        name: "Cobalt Strike",
-        icon: "/icons/cobaltstrike.svg", // You might need to create a generic icon for this
+        name: "Hydra",
+        icon: "/icons/hydra.png",
         category: "Offensive Security Tools"
     },
     // Analysis & Forensics
