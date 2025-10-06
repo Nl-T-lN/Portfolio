@@ -86,6 +86,11 @@ section {
     font-weight: 700;
 }
 
+.intro_sec .intro h2 {
+    font-size: 3rem; /* or larger as you prefer */
+    font-weight: bold;
+}
+
 .intro_sec .text h3 {
     font-size: 16px;
     font-weight: 700;
