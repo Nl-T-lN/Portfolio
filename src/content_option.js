@@ -43,8 +43,8 @@ const skills = [
         category: "Languages"
     },
     {
-        name: "Bash",
-        icon: "/icons/bash.svg",
+        name: "C",
+        icon: "/icons/C.svg",
         category: "Languages"
     },
     {
