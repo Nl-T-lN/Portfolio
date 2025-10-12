@@ -48,8 +48,8 @@ const skills = [
         category: "Languages"
     },
     {
-        name: "PowerShell",
-        icon: "/icons/powershell.svg",
+        name: "C++",
+        icon: "/icons/Cpp.svg",
         category: "Languages"
     },
     // Offensive Security Tools
